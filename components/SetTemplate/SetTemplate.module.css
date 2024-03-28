@@ -1,0 +1,50 @@
+.setTemplate {
+  display: flex;
+  min-height: 2rem;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem;
+}
+.setTemplateButton[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.setTemplateButton[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.setTemplateButtonSuccess[type="submit"] {
+  background-color: #33d401;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.setTemplateButtonSuccess[type="submit"]:hover {
+  background-color: #138105;
+}
+
+.backButton[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+.backButton[type="submit"]:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+    --desktop-nav-height: 6rem;
+  }
+
+  .dark {
+    /* Default hsl 222.2 84% 4.9%; */
+    /* --background: rgb(240, 240, 240); */
+    --background: 0 0% 12%;
+    --foreground: 210 40% 98%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 40%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+@layer components {
+  .fullHeight {
+    @apply min-h-[calc(100vh-6rem)];
+  }
+  .button {
+    @apply p-2 px-4 bg-black/60 mx-5 cursor-pointer rounded-3xl border-none text-white font-medium hover:bg-white hover:text-black transition duration-200;
+  }
+  .framerButton {
+    @apply p-2 px-4 cursor-pointer font-bold text-xl hover:opacity-80 transition-opacity duration-75;
+  }
+  .customInput {
+    @apply bg-gray-300/60 hover:bg-transparent focus:bg-transparent ring-red-400/50 hover:ring-4 focus-visible:ring-4 focus-visible:ring-red-400/50 transition-all cursor-pointer;
+  }
+  .responsiveHeading {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
+  }
+  .responsiveHeading2 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+  }
+  .responsiveHeading3 {
+    @apply text-3xl lg:text-4xl xl:text-5xl;
+  }
+  .responsiveHeading4 {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+  }
+
+  .responsiveText {
+    @apply text-[calc(0.390625vw+13px)];
+  }
+  .responsiveText2 {
+    @apply text-[calc(0.390625vw+12px)];
+  }
+  .responsiveText3 {
+    @apply text-[calc(0.390625vw+11px)];
+  }
+  .responsiveText4 {
+    @apply text-[calc(0.390625vw+10px)];
+  }
+  .themeColorText {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-500  bg-purple-600;
+  }
+  .themeColorBackground {
+    @apply bg-gradient-to-bl from-blue-600 via-purple-800 bg-purple-600;
+  }
+  .baseColor {
+    @apply bg-[rgb(243,244,246)];
+  }
+  .offBaseColor {
+    @apply bg-[#1b1b1b];
+  }
+}

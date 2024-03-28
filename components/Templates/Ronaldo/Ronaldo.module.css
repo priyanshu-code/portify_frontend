@@ -1,0 +1,219 @@
+.container {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100vw;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+  overflow: hidden;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100%;
+  position: relative;
+}
+.introSection1 {
+  min-width: 50%;
+  min-height: 100vh;
+  background-color: rgba(3, 26, 230, 0.1);
+}
+.introSection2 {
+  min-width: 50%;
+  min-height: 100vh;
+  background-color: rgb(247, 247, 247);
+}
+.introContent {
+  position: absolute;
+  text-align: center;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+.introContent > p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: blue;
+}
+.introContent > h1 {
+  margin: 1rem 0;
+  font-weight: 700;
+  font-size: 4.3rem;
+}
+.introContent > h2::before {
+  content: "I'm a ";
+  color: black;
+  text-decoration: none;
+}
+.introContent > h2 {
+  margin: 0;
+  color: blue;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.introContent > button {
+  margin-top: 6rem;
+  transform: rotate(45deg);
+  height: 4rem;
+  width: 4rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(102, 16, 242, 0.1);
+}
+.introContent > button > img {
+  transform: rotate(-135deg);
+  height: 1rem;
+  width: 2rem;
+  text-align: center;
+  animation: arrowDown 2s infinite;
+  animation-delay: 10s;
+}
+@keyframes arrowDown {
+  0% {
+    transform: rotate(-135deg) translateX(1rem) scale(90%);
+  }
+  80% {
+    transform: rotate(-135deg) translateX(-1rem) scale(100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  max-width: 90%;
+}
+.aboutMeSection {
+  display: flex;
+  justify-content: center;
+  min-height: 40rem;
+}
+.aboutImage {
+  max-width: 50%;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+}
+.aboutImage > img {
+  min-height: inherit;
+  align-self: flex-end;
+}
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 2% 4%;
+}
+
+.aboutMe > h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.aboutMe > p {
+  max-width: 300px;
+  margin: 1.5rem 0;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.aboutMe > ul {
+  padding: 0;
+}
+.aboutMe > ul > li {
+  list-style: none;
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.whatYouDo {
+  margin-top: 5rem;
+  min-width: 70%;
+  max-width: 70%;
+}
+.whatYouDo > h1 {
+  font-size: 4rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+.whatYouDo > p {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.projects {
+  margin-top: 5rem;
+  min-width: 70%;
+  max-width: 70%;
+}
+.projects > h1 {
+  font-size: 4rem;
+  text-decoration: underline;
+  margin-bottom: 4rem;
+  min-width: 100%;
+}
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 960px) {
+  .aboutMeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40rem;
+  }
+  .aboutImage {
+    max-width: 100%;
+    min-width: 50%;
+    flex-direction: column;
+    align-items: center;
+    min-height: 600px;
+  }
+  .aboutImage > img {
+    min-height: inherit;
+    align-self: flex-end;
+  }
+  .aboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .aboutMe > h1 {
+    font-weight: 600;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .aboutMe > p {
+    margin: 1.5rem 0;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+}
